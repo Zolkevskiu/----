@@ -27,18 +27,6 @@
             </ul>
         </div>
         <div class="burger-bg" onclick="burger_close()"></div>
-        <script>
-            let block_menu = document.querySelector('.burger-block')
-            let block_bg = document.querySelector('.burger-bg')
-            const burger = () => {
-                block_menu.classList.add('burger-active')
-                block_bg.classList.add('burger-active')
-            }
-            const burger_close = () => {
-                block_menu.classList.remove('burger-active')
-                block_bg.classList.remove('burger-active')
-            }
-        </script>
         <div class="__header-wrap">
             <h1 class="__title"> Стильно <br> Якісно <br> Швидко </h1>
             <p class="__paragraph"> Шпигуєш за модою? Чи може мода за
@@ -77,8 +65,12 @@
     </div>
     <div class="coments-block">
         <h2 class="__title">Що люди думають про <br> shtirlits.shop?</h2>
-        <div>
+        <div class="image-container">
             <img src="img/coment.png" alt="">
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="" alt="">
         </div>
     </div>
     <div class="logos-block">
@@ -132,7 +124,7 @@
     <div class="contact-block">
         <h2 class="__title">Хочеш долучитись до нас ?</h2>
         <p class="__sub-title">Зв’яжіться з нами та отримайте безкоштовну консультацію щодо вашого майбутнього стилю</p>
-        <a href="#" class="__btn">Зв’язок з нами <img src="img/arrow-tech.svg" alt=""></a>
+        <a href="#" class="__btn button">Зв’язок з нами <img src="img/arrow-tech.svg" alt=""></a>
     </div>
     <div class="container" id="faq">
         <div class="accordion">
@@ -178,24 +170,6 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-        const items = document.querySelectorAll(".accordion button");
-
-        function toggleAccordion() {
-            const itemToggle = this.getAttribute('aria-expanded');
-
-            for (i = 0; i < items.length; i++) {
-                items[i].setAttribute('aria-expanded', 'false');
-            }
-
-            if (itemToggle == 'false') {
-                this.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
-    </script>
     <div class="footer" id="contact-block">
         <div class="bubbles">
             <div class="bubble"
@@ -617,7 +591,7 @@
                 <div class="__col">
                     <ul>
                         <b>Контакти</b>
-                        <li><a href="mailto:contact@interno.com">contact@interno.com</a></li>
+                        <li><a href="mailto:petrekovich@sosy.com">petrekovich@sosy.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -633,6 +607,37 @@
             </filter>
         </defs>
     </svg>
+    <script src="popup.js"></script>
+    <script>
+        let block_menu = document.querySelector('.burger-block')
+        let block_bg = document.querySelector('.burger-bg')
+        const burger = () => {
+            block_menu.classList.add('burger-active')
+            block_bg.classList.add('burger-active')
+        }
+        const burger_close = () => {
+            block_menu.classList.remove('burger-active')
+            block_bg.classList.remove('burger-active')
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
 </body>
 
 </html>

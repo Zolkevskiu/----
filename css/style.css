@@ -34,6 +34,9 @@ body {
   background-color: #120E1B;
   width: 100%;
   max-height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 .header .head .__head-wrap {
   padding: 0 15px;
@@ -53,7 +56,10 @@ body {
   max-width: 1440px;
   width: 100%;
   padding: 0 15px;
-  margin: 10% auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .header .__title {
   color: #fff;
@@ -87,10 +93,32 @@ body {
   gap: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .burger-block li {
   list-style: none;
   text-align: center;
+}
+.burger-block li a {
+  position: relative;
+  display: block;
+  transition: 0.3s;
+}
+.burger-block li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.burger-block li a:hover {
+  color: #fff;
+}
+.burger-block li a:hover::before {
+  width: 100%;
 }
 .burger-block a {
   text-decoration: none;
@@ -140,10 +168,18 @@ body {
   text-decoration: none;
   border-radius: 18px;
   margin-top: 30px;
+  transition: 0.3s;
 }
 .button img {
   fill: #fff;
   color: #fff;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #000;
+}
+.button:hover img {
+  transform: translateX(10px);
 }
 
 .slang-block {
@@ -219,6 +255,60 @@ body {
   color: #fff;
   text-align: center;
   font-size: 45px;
+}
+.coments-block .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  height: 80%;
+  object-fit: cover;
+}
+.coments-block .popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.coments-block .popup-image span {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+.coments-block .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  height: 600px;
+  object-fit: cover;
+}
+.coments-block .image-container .image {
+  height: 250px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.coments-block .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.coments-block .image-container .image:hover img {
+  transform: scale(1.1);
 }
 
 .logos-block {
@@ -318,7 +408,7 @@ body {
   width: auto;
   margin: 0 auto;
 }
-.contact-block .__btn {
+.contact-block .button {
   background-color: #120E1B;
   font-size: 18px;
   display: flex;
@@ -330,6 +420,11 @@ body {
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
+  margin-top: 0;
+  height: auto;
+  -webkit-box-shadow: 2px 3px 69px 48px rgb(17, 16, 52);
+  -moz-box-shadow: 2px 3px 69px 48px rgb(17, 16, 52);
+  box-shadow: 2px 3px 69px 48px rgb(17, 16, 52);
 }
 
 .container {
@@ -476,6 +571,27 @@ body {
   list-style: none;
   padding: 5px 0;
 }
+.footer .content li a {
+  position: relative;
+  display: block;
+  transition: 0.3s;
+}
+.footer .content li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.footer .content li a:hover {
+  color: #fff;
+}
+.footer .content li a:hover::before {
+  width: 100%;
+}
 .footer .content p {
   max-width: 326px;
   width: 100%;
@@ -483,6 +599,11 @@ body {
 .footer .content b {
   color: #fff;
   font-size: 25px;
+}
+.footer .content ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .footer .content .__img-col {
   gap: 15px;
