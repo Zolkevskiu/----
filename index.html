@@ -14,10 +14,15 @@
     <meta property="og:image" content="img/nike.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Shtirlits shop</title>
 </head>
 
 <body>
+    <script>
+        AOS.init();
+      </script>
     <header class="header" id="header">
         <nav class="head">
             <div class="__head-wrap">
@@ -36,24 +41,24 @@
         </div>
         <div class="burger-bg" onclick="burger_close()"></div>
         <div class="__header-wrap">
-            <h1 class="__title"> Стильно <br> Якісно <br> Швидко </h1>
-            <p class="__paragraph"> Шпигуєш за модою? Чи може мода за
+            <h1 class="__title" data-aos="fade-right" data-aos-duration="400"> Стильно <br> Якісно <br> Швидко </h1>
+            <p class="__paragraph" data-aos="fade-right" data-aos-duration="600"> Шпигуєш за модою? Чи може мода за
                 тобою? Відкрий для себе в shtirlits.shop!
                 #FashionSpy <a> Почати </a>
             </p>
-            <a href="#" class="button">Почати <img src="img/arrow.svg" alt="arrow"></a>
+            <a data-aos="fade-right" data-aos-duration="700" data-aos-offset="0" href="#" class="button">Почати <img src="img/arrow.svg" alt="arrow"></a>
         </div>
     </header>
     <div class="slang-block" id="slang-block">
-        <div class="__col">
+        <div class="__col" data-aos="zoom-in-right">
             <h3 class="__title">Стильно</h3>
             <p class="__paragraph">Вибір стильного одягу - твій перший крок до впевненості у собі.</p>
         </div>
-        <div class="__col">
+        <div class="__col" data-aos="zoom-in">
             <h3 class="__title">Якісно</h3>
             <p class="__paragraph">Якісний одяг - вагомий внесок у твоє комфортне життя.</p>
         </div>
-        <div class="__col">
+        <div class="__col" data-aos="zoom-in-left">
             <h3 class="__title">Швидко</h3>
             <p class="__paragraph">Швидко та легко. Замовте сьогодні та отримайте вже завтра!</p>
         </div>
@@ -66,7 +71,7 @@
             <img src="img/nike.png" class="__img-mobile">
             <a href="#" class="button"> Замовити зараз <img src="img/arrow-tech.svg" alt="arrow"></a>
         </div>
-        <div class="__img-block"><img src="img/nike.png"></div>
+        <div class="__img-block"><img src="img/nike.png" data-aos="zoom-in"></div>
     </div>
     <div class="coments-block">
         <h2 class="__title">Що люди думають про <br> shtirlits.shop?</h2>
@@ -79,13 +84,13 @@
         </div>
     </div>
     <div class="logos-block">
-        <img src="img/logos/STUSSY__ステューシー__iPhone壁紙ギャラリー-removebg-preview 1.png" alt="">
+        <img src="img/logos/STUSSY__ステューシー__iPhone壁紙ギャラリー-removebg-preview 1.png" alt="" data-aos="zoom-in" data-aos-duration="500">
         <img src="img/logos/ノースフェイス_The_NORTH_FACE_TNF_カッティングステッカー_NN88106_K_ブーティー_Brand_Label_PNG_-_Free_Download-removebg-preview(1) 1.png"
-            alt="">
-        <img src="img/logos/U5umKsbi-removebg-preview 1.png" alt="">
-        <img src="img/logos/adidas_-_Brand_Breakdown_-_TENNIS_EXPRESS_BLOG-removebg-preview 1.png" alt="">
+            alt="" data-aos="zoom-in" data-aos-duration="600">
+        <img src="img/logos/U5umKsbi-removebg-preview 1.png" alt="" data-aos="zoom-in" data-aos-duration="700"> 
+        <img src="img/logos/adidas_-_Brand_Breakdown_-_TENNIS_EXPRESS_BLOG-removebg-preview 1.png" alt="" data-aos="zoom-in" data-aos-duration="800">
         <img src="img/logos/Download_Puma_Logo_White_Symbol_With_Name_Clothes_Design_Icon_Abstract_football_Vector_Illustration_With_Black_Background-removebg-preview 1.png"
-            alt="">
+            alt="" data-aos="zoom-in" data-aos-duration="900">
     </div>
     <div class="products-block">
         <h2 class="__title">Наша продукція</h2>
@@ -137,11 +142,11 @@
     <div class="contact-block">
         <h2 class="__title">Хочеш долучитись до нас ?</h2>
         <p class="__sub-title">Зв’яжіться з нами та отримайте безкоштовну консультацію щодо вашого майбутнього стилю</p>
-        <a href="#" class="__btn button">Зв’язок з нами <img src="img/arrow-tech.svg" alt=""></a>
+        <a href="#" class="__btn button" data-aos="zoom-in">Зв’язок з нами <img src="img/arrow-tech.svg" alt=""> </a>
     </div>
     <div class="container" id="faq">
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="zoom-in" data-aos-duration="500">
                 <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Чому саме
                         нас?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
@@ -149,7 +154,7 @@
                         індивідуальний стиль.</p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="zoom-in" data-aos-duration="700">
                 <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Як оформити
                         замовлення?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
@@ -157,7 +162,7 @@
                         служби підтримки.</p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="zoom-in" data-aos-duration="900">
                 <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Які найкращі поради
                         що до майбутнього стилю ?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
@@ -165,7 +170,7 @@
                         уподобання та експериментуйте зі стилями.</p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="zoom-in" data-aos-duration="1100">
                 <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Який найпростіший
                         спосіб підібрати свій стиль ?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
@@ -173,7 +178,7 @@
                         подобається, та додайте до цього трохи експериментів.</p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="zoom-in" data-aos-duration="1300">
                 <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Чи слід довіряти
                         саме нам ?</span><span class="icon" aria-hidden="true"></span></button>
                 <div class="accordion-content">
