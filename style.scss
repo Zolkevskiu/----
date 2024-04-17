@@ -705,7 +705,8 @@ box-shadow: 2px 3px 69px 48px rgba(17,16,52,1);
         transform: translate(0, -100%);
         width: 100%;
         border-radius: 0;
-        height: 70vh;
+        height: 50vh;
+        top: 0;
         padding: 50px;
     }
     .burger-active {
@@ -713,7 +714,15 @@ box-shadow: 2px 3px 69px 48px rgba(17,16,52,1);
     }
     .burger-block img {
         right: 20px;
-        top: 270px;
+        top: 20px;
+        left: auto;
         bottom: 0;
+    }
+    .logos-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+            width: auto;
+        }
     }
 }
