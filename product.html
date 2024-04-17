@@ -7,183 +7,132 @@
     <meta name="description" content="Web clothes shop">
     <meta name="keywords" content="shop, clothes, web">
     <meta name="author" content="Denis Petryk">
-    <meta property = "og:title" content = "Shtirlits shop" />
-    <meta property = "og:description" content = "Shtirlits shop Сучасний магазин одягу" />
-    <meta property = "og:type" content = "website" />
-    <meta property = "og:url" content = "index.html.html" />
-    <meta property = "og:image" content = "img/nike.png" />
+    <meta property="og:title" content="Shtirlits shop" />
+    <meta property="og:description" content="Shtirlits shop Сучасний магазин одягу" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="index.html.html" />
+    <meta property="og:image" content="img/nike.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
     <title>Shtirlits shop</title>
+    <style>
+        .head {
+            position: relative;
+        }
+
+        .header {
+            background-image: none;
+            height: auto;
+            flex: 1 0 auto;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        .content-wrap {
+            max-width: 1200px;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            gap: 144px;
+        }
+        .content-wrap .__col {
+            width: 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .content-wrap .__col h2 {
+            font-size: 32px;
+        }
+        .content-wrap .__col p {
+            color: #959595;
+            font-size: 22px;
+        }
+        .content-wrap .__col a {
+            padding: 10px;
+            font-size: 22px;
+        }
+        .content-wrap .__col span {
+            font-size: 22px;
+        }
+        .content-wrap .__col .__img-bg {
+            background-color: #111034;
+        }
+        .footer {
+            flex: 0 0 auto;
+        }
+        @media (max-width: 1000px) {
+            .content-wrap {
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+                height: auto;
+                padding: 100px 0;
+                gap: 24px;
+            }
+            .content-wrap .__col {
+                width: auto;
+            }
+            .content-wrap .__col:last-child {
+                max-width: 536px;
+                width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            .content-wrap .__col {
+                width: 100%;
+                padding: 0 15px;
+            }
+            .content-wrap .__col img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="header" id="header">
         <nav class="head">
             <div class="__head-wrap">
-                <a class="logo"><img src="img/logo.svg" alt="logo"></a>
+                <a class="logo" href="index.html"><img src="img/logo.svg" alt="logo"></a>
                 <img src="img/BURGER.svg" alt="" onclick="burger()" style="cursor: pointer;">
             </div>
         </nav>
         <div class="burger-block">
             <img src="img/BURGER.svg" alt="" onclick="burger_close()">
             <ul>
-                <li><a href="#header">Головна</a></li>
-                <li><a href="#slang-block">Про нас</a></li>
-                <li><a href="#contact-block">Контакти</a></li>
-                <li><a href="#faq">Інфо</a></li>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index.html#slang-block">Про нас</a></li>
+                <li><a href="index.html#contact-block">Контакти</a></li>
+                <li><a href="index.html#faq">Інфо</a></li>
             </ul>
         </div>
         <div class="burger-bg" onclick="burger_close()"></div>
-        <div class="__header-wrap">
-            <h1 class="__title"> Стильно <br> Якісно <br> Швидко </h1>
-            <p class="__paragraph"> Шпигуєш за модою? Чи може мода за
-                тобою? Відкрий для себе в shtirlits.shop!
-                #FashionSpy <a> Почати </a>
-            </p>
-            <a href="#" class="button">Почати <img src="img/arrow.svg" alt="arrow"></a>
-        </div>
     </header>
-    <div class="slang-block" id="slang-block">
+    <div class="content-wrap">
         <div class="__col">
-            <h3 class="__title">Стильно</h3>
-            <p class="__paragraph">Вибір стильного одягу - твій перший крок до впевненості у собі.</p>
-            <a href="#" class="__button">View More <img src="img/col-arrow.svg" alt=""></a>
-        </div>
-        <div class="__col">
-            <h3 class="__title">Якісно</h3>
-            <p class="__paragraph">Якісний одяг - вагомий внесок у твоє комфортне життя.</p>
-            <a href="#" class="__button">View More <img src="img/col-arrow.svg" alt=""></a>
+            <div class="__img-bg">
+                <img src="img/products/tshort.png" alt="">
+            </div>
         </div>
         <div class="__col">
-            <h3 class="__title">Швидко</h3>
-            <p class="__paragraph">Швидко та легко. Замовте сьогодні та отримайте вже завтра!</p>
-            <a href="#" class="__button">View More <img src="img/col-arrow.svg" alt=""></a>
-        </div>
-    </div>
-    <div class="best-sells">
-        <div class="__txt-block">
-            <h2> Хіт продажу! <br> Nike tech fleece </h2>
-            <p> Вільний крій, кишеня на рукаві для ключів та зручна анатомічна посадка дає змогу тренуватися без
-                дискомфорту і виключає тертя у місцях згинів</p>
-            <img src="img/nike.png" class="__img-mobile">
-            <a href="#" class="button"> Замовити зараз <img src="img/arrow-tech.svg" alt="arrow"></a>
-        </div>
-        <div class="__img-block"><img src="img/nike.png"></div>
-    </div>
-    <div class="coments-block">
-        <h2 class="__title">Що люди думають про <br> shtirlits.shop?</h2>
-        <div class="image-container">
-            <img src="img/coment.png" alt="">
-        </div>
-        <div class="popup-image">
-            <span>&times;</span>
-            <img src="" alt="">
-        </div>
-    </div>
-    <div class="logos-block">
-        <img src="img/logos/STUSSY__ステューシー__iPhone壁紙ギャラリー-removebg-preview 1.png" alt="">
-        <img src="img/logos/ノースフェイス_The_NORTH_FACE_TNF_カッティングステッカー_NN88106_K_ブーティー_Brand_Label_PNG_-_Free_Download-removebg-preview(1) 1.png"
-            alt="">
-        <img src="img/logos/U5umKsbi-removebg-preview 1.png" alt="">
-        <img src="img/logos/adidas_-_Brand_Breakdown_-_TENNIS_EXPRESS_BLOG-removebg-preview 1.png" alt="">
-        <img src="img/logos/Download_Puma_Logo_White_Symbol_With_Name_Clothes_Design_Icon_Abstract_football_Vector_Illustration_With_Black_Background-removebg-preview 1.png"
-            alt="">
-    </div>
-    <div class="products-block">
-        <h2 class="__title">Наша продукція</h2>
-        <p class="__sub-title">З нашою колекцією, яка зробить кожний образ надзвичайно стильним, та командою
-            спеціалістів, готових Вам допомогти, покращити гардероб стало насправді легше.</p>
-        <div class="__row">
-            <div class="__col">
-                <div class="__img-bg">
-                    <a href="product.html"><img src="img/products/pants.png" alt=""></a>
-                </div>
-                <h3 class="__title">Штани</h3>
-                <p class="__sub-title">Демисезонна <br> колекція</p>
-                <a href="product.html" class="__btn"><img src="img/arrow.svg" alt=""></a>
+            <h2 class="__title">Футболка Carhartt</h2>
+            <div>
+                <p>Розмір: <b>X</b></p>
+                <p>Бренд: <b>Carhartt</b></p>
+                <p>Колекція: <b>Демисезон</b></p>
             </div>
-            <div class="__col">
-                <div class="__img-bg">
-                   <a href="product.html"> <img src="img/products/switshot.png" alt=""></a>
-                </div>
-                <h3 class="__title">Світшот</h3>
-                <p class="__sub-title">Демисезонна <br> колекція</p>
-                <a href="product.html" class="__btn"><img src="img/arrow.svg" alt=""></a>
-            </div>
-            <div class="__col">
-                <div class="__img-bg">
-                    <a href="product.html"><img src="img/products/tshort.png" alt="" width="300"></a>
-                </div>
-                <h3 class="__title">Футболка</h3>
-                <p class="__sub-title">Демисезонна <br> колекція</p>
-                <a href="product.html" class="__btn"><img src="img/arrow.svg" alt=""></a>
-            </div>
-            <div class="__col">
-                <div class="__img-bg">
-                    <a href="product.html"><img src="img/products/pants.png" alt=""></a>
-                </div>
-                <h3 class="__title">Штани</h3>
-                <p class="__sub-title">Демисезонна <br> колекція</p>
-                <a href="product.html" class="__btn"><img src="img/arrow.svg" alt=""></a>
-            </div>
-            <div class="__col">
-                <div class="__img-bg">
-                    <a href="product.html"><img src="img/products/tshort.png" alt="" width="300"></a>
-                </div>
-                <h3 class="__title">Футболка</h3>
-                <p class="__sub-title">Демисезонна <br> колекція</p>
-                <a href="product.html" class="__btn"><img src="img/arrow.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="contact-block">
-        <h2 class="__title">Хочеш долучитись до нас ?</h2>
-        <p class="__sub-title">Зв’яжіться з нами та отримайте безкоштовну консультацію щодо вашого майбутнього стилю</p>
-        <a href="#" class="__btn button">Зв’язок з нами <img src="img/arrow-tech.svg" alt=""></a>
-    </div>
-    <div class="container" id="faq">
-        <div class="accordion">
-            <div class="accordion-item">
-                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Чому саме
-                        нас?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Ми пропонуємо унікальні та стильні рішення для вашого гардеробу, які підкреслять ваш
-                        індивідуальний стиль.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Як оформити
-                        замовлення?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Оформити замовлення можна швидко та зручно через наш веб-сайт або за допомогою нашої дружньої
-                        служби підтримки.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Які найкращі поради
-                        що до майбутнього стилю ?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Поради щодо майбутнього стилю: дізнайтеся про останні тренди, звертайте увагу на свої власні
-                        уподобання та експериментуйте зі стилями.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Який найпростіший
-                        спосіб підібрати свій стиль ?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Почніть з аналізу вашого гардеробу та визначення вашого особистого виразного елементу, який вам
-                        подобається, та додайте до цього трохи експериментів.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Чи слід довіряти
-                        саме нам ?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Так, наша команда з великим задоволенням допоможе вам з усіма питаннями та зробить ваше досвід
-                        покупок максимально приємним і безпечним.</p>
-                </div>
-            </div>
+            <span>Ціна: <b>1200₴</b></span>
+            <a href="#" class="button">Замовити <img src="img/arrow.svg" alt=""></a>
         </div>
     </div>
     <div class="footer" id="contact-block">
@@ -613,36 +562,7 @@
             </div>
         </div>
     </div>
-    <svg style="position:fixed; top:100vh">
-        <defs>
-            <filter id="blob">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="blob"></feColorMatrix>
-                <!--feComposite(in="SourceGraphic" in2="blob" operator="atop") //After reviewing this after years I can't remember why I added this but it isn't necessary for the blob effect-->
-            </filter>
-        </defs>
-    </svg>
-    <script src="popup.js"></script>
     <script src="burger.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-        const items = document.querySelectorAll(".accordion button");
-
-        function toggleAccordion() {
-            const itemToggle = this.getAttribute('aria-expanded');
-
-            for (i = 0; i < items.length; i++) {
-                items[i].setAttribute('aria-expanded', 'false');
-            }
-
-            if (itemToggle == 'false') {
-                this.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
-    </script>
 </body>
 
 </html>
